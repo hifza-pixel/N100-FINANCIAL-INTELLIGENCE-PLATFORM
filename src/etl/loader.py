@@ -1,81 +1,100 @@
 """
 loader.py
 
-Loads all Excel source files and displays basic information.
+Load all Excel files into SQLite Database
 """
 
-import os
+import sqlite3
 import pandas as pd
+import os
 
-
-
+DATABASE = "db/nifty100.db"
 DATA_PATH = "data/raw"
 
-FILES = [
+TITLE_FILES = [
     "analysis.xlsx",
     "balancesheet.xlsx",
     "cashflow.xlsx",
     "companies.xlsx",
     "documents.xlsx",
-    "financial_ratios.xlsx",
-    "market_cap.xlsx",
-    "peer_groups.xlsx",
     "profitandloss.xlsx",
-    "prosandcons.xlsx",
-    "sectors.xlsx",
-    "stock_prices.xlsx"
+    "prosandcons.xlsx"
 ]
 
-def load_excel(file_name):
-    """
-    Load Excel file with the correct header row.
-    """
+FILES = {
+    "companies.xlsx": "companies",
+    "balancesheet.xlsx": "balancesheet",
+    "cashflow.xlsx": "cashflow",
+    "profitandloss.xlsx": "profitandloss",
+    "financial_ratios.xlsx": "financial_ratios",
+    "market_cap.xlsx": "market_cap",
+    "peer_groups.xlsx": "peer_groups",
+    "analysis.xlsx": "analysis",
+    "documents.xlsx": "documents",
+    "prosandcons.xlsx": "prosandcons",
+    "sectors.xlsx": "sectors",
+    "stock_prices.xlsx": "stock_prices"
+}
 
-    file_path = os.path.join(DATA_PATH, file_name)
 
-    # Files having title row in first row
-    title_files = [
-        "analysis.xlsx",
-        "balancesheet.xlsx",
-        "cashflow.xlsx",
-        "companies.xlsx",
-        "documents.xlsx",
-        "profitandloss.xlsx",
-        "prosandcons.xlsx"
-    ]
+def load_excel(file):
 
-    if file_name in title_files:
-        df = pd.read_excel(file_path, header=1)
-    else:
-        df = pd.read_excel(file_path)
+    path = os.path.join(DATA_PATH, file)
 
-    return df
+    if file in TITLE_FILES:
+        return pd.read_excel(path, header=1)
+
+    return pd.read_excel(path)
+
 
 def main():
 
-    print("=" * 60)
-    print("N100 Financial Intelligence Platform")
-    print("Loading Source Files")
-    print("=" * 60)
+    conn = sqlite3.connect(DATABASE)
 
-    for file in FILES:
+    conn.execute("PRAGMA foreign_keys=ON")
 
-        try:
+    print("="*60)
+    print("Loading Excel Files into SQLite")
+    print("="*60)
 
-            df = load_excel(file)
+    audit=[]
 
-            print(f"\n✅ {file}")
-            print(f"Rows    : {df.shape[0]}")
-            print(f"Columns : {df.shape[1]}")
+    for file, table in FILES.items():
 
-            print("Column Names:")
-            print(df.columns.tolist())
+        print(f"\nLoading {file}")
 
-        except Exception as e:
+        df=load_excel(file)
 
-            print(f"\n❌ Error loading {file}")
-            print(e)
+        rows=len(df)
+
+        df.to_sql(table,conn,if_exists="replace",index=False)
+
+        audit.append({
+            "table":table,
+            "rows_loaded":rows
+        })
+
+        print(f"✓ {rows} rows inserted")
+
+    audit_df=pd.DataFrame(audit)
+
+    os.makedirs("output",exist_ok=True)
+
+    audit_df.to_csv(
+        "output/load_audit.csv",
+        index=False
+    )
+
+    conn.commit()
+
+    conn.close()
+
+    print("\nDatabase Loading Complete.")
+
+    print("Audit File Created")
+
+    print("output/load_audit.csv")
 
 
-if __name__ == "__main__":
+if __name__=="__main__":
     main()
