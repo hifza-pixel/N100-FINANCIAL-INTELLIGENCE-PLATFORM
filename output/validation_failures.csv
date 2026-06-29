@@ -1,0 +1,1459 @@
+table,rule,severity,row,message
+companies.xlsx,DQ-12,WARNING,91,Invalid Website URL
+companies.xlsx,DQ-15,WARNING,91,face_value not numeric
+companies.xlsx,DQ-15,WARNING,91,book_value not numeric
+companies.xlsx,DQ-15,WARNING,91,roce_percentage not numeric
+companies.xlsx,DQ-15,WARNING,46,roe_percentage not numeric
+companies.xlsx,DQ-15,WARNING,91,roe_percentage not numeric
+balancesheet.xlsx,DQ-02,CRITICAL,112,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,113,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,114,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,115,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,116,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,117,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,118,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,119,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,120,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,121,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,122,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,123,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,124,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,920,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,921,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,922,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,923,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,924,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,925,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,926,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,927,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,928,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,929,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,930,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,931,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,932,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,933,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,934,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,935,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,936,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,937,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,938,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,939,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,940,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,941,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,942,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,943,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,944,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,945,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,946,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,947,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,948,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,949,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,950,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,951,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,952,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,953,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,954,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,955,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,956,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,957,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,958,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,959,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,960,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,961,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,962,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,963,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,964,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,965,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,966,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,967,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,981,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,982,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,983,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,984,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,985,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,986,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,987,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,988,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,989,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,990,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,991,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,992,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,993,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,1273,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,1274,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,1275,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,1276,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,1277,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,1278,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,1279,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,1280,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,1281,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,1282,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,1283,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,1284,Duplicate company_id-year
+balancesheet.xlsx,DQ-02,CRITICAL,1285,Duplicate company_id-year
+balancesheet.xlsx,DQ-03,CRITICAL,1033,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1034,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1035,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1036,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1037,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1038,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1039,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1040,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1041,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1042,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1043,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1044,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1045,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1059,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1060,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1061,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1062,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1063,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1064,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1065,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1066,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1067,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1068,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1069,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1070,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1071,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1072,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1073,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1074,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1075,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1076,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1077,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1078,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1079,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1080,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1081,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1082,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1083,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1084,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1085,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1086,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1087,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1088,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1089,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1090,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1091,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1092,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1118,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1119,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1120,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1121,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1122,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1123,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1124,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1125,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1126,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1127,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1128,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1129,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1130,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1131,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1132,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1133,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1134,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1135,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1136,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1137,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1138,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1139,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1140,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1141,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1142,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1156,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1157,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1158,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1159,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1160,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1161,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1162,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1163,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1164,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1165,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1166,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1167,Foreign Key Missing
+balancesheet.xlsx,DQ-03,CRITICAL,1168,Foreign Key Missing
+balancesheet.xlsx,DQ-16,WARNING,JIOFIN,Less than 5 years data
+cashflow.xlsx,DQ-02,CRITICAL,24,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,25,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,26,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,27,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,28,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,29,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,30,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,31,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,32,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,33,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,34,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,157,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,158,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,159,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,160,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,161,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,162,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,163,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,164,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,165,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,166,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,167,Duplicate company_id-year
+cashflow.xlsx,DQ-02,CRITICAL,168,Duplicate company_id-year
+cashflow.xlsx,DQ-03,CRITICAL,126,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,127,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,128,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,129,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,130,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,131,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,132,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1098,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1099,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1100,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1101,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1102,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1103,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1104,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1105,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1106,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1107,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1108,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1109,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1110,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1111,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1112,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1113,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1114,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1115,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1116,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1117,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1118,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1119,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1120,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1121,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1122,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1123,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1124,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1125,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1126,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1127,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1128,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1129,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1130,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1131,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1132,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1133,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1134,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1135,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1136,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1137,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1138,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1139,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1140,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1141,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1142,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1143,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1144,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1145,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1146,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1147,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1148,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1149,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1150,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1151,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1152,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1153,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1154,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1155,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1156,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1157,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1158,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1159,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1160,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1161,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1162,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1163,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1164,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1165,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1166,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1167,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1168,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1169,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1170,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1171,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1172,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1173,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1174,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1175,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1176,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1177,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1178,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1179,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1180,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1181,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1182,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1183,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1184,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1185,Foreign Key Missing
+cashflow.xlsx,DQ-03,CRITICAL,1186,Foreign Key Missing
+cashflow.xlsx,DQ-07,WARNING,1095,Net Cash Flow mismatch
+cashflow.xlsx,DQ-15,WARNING,487,operating_activity not numeric
+cashflow.xlsx,DQ-15,WARNING,488,operating_activity not numeric
+cashflow.xlsx,DQ-15,WARNING,487,investing_activity not numeric
+cashflow.xlsx,DQ-15,WARNING,488,investing_activity not numeric
+cashflow.xlsx,DQ-15,WARNING,487,financing_activity not numeric
+cashflow.xlsx,DQ-15,WARNING,488,financing_activity not numeric
+cashflow.xlsx,DQ-15,WARNING,487,net_cash_flow not numeric
+cashflow.xlsx,DQ-15,WARNING,488,net_cash_flow not numeric
+cashflow.xlsx,DQ-16,WARNING,JIOFIN,Less than 5 years data
+profitandloss.xlsx,DQ-02,CRITICAL,60,Duplicate company_id-year
+profitandloss.xlsx,DQ-02,CRITICAL,61,Duplicate company_id-year
+profitandloss.xlsx,DQ-02,CRITICAL,62,Duplicate company_id-year
+profitandloss.xlsx,DQ-02,CRITICAL,63,Duplicate company_id-year
+profitandloss.xlsx,DQ-02,CRITICAL,64,Duplicate company_id-year
+profitandloss.xlsx,DQ-02,CRITICAL,65,Duplicate company_id-year
+profitandloss.xlsx,DQ-02,CRITICAL,66,Duplicate company_id-year
+profitandloss.xlsx,DQ-02,CRITICAL,67,Duplicate company_id-year
+profitandloss.xlsx,DQ-02,CRITICAL,68,Duplicate company_id-year
+profitandloss.xlsx,DQ-02,CRITICAL,69,Duplicate company_id-year
+profitandloss.xlsx,DQ-02,CRITICAL,70,Duplicate company_id-year
+profitandloss.xlsx,DQ-02,CRITICAL,71,Duplicate company_id-year
+profitandloss.xlsx,DQ-02,CRITICAL,72,Duplicate company_id-year
+profitandloss.xlsx,DQ-03,CRITICAL,1164,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1165,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1166,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1167,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1168,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1169,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1170,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1171,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1172,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1173,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1174,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1175,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1176,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1177,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1178,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1179,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1180,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1181,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1182,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1183,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1184,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1185,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1186,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1187,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1188,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1189,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1190,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1191,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1192,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1193,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1194,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1195,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1196,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1197,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1198,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1199,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1200,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1201,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1202,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1203,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1204,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1205,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1206,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1207,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1208,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1209,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1210,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1211,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1212,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1213,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1214,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1215,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1216,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1217,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1218,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1219,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1220,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1221,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1222,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1223,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1224,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1225,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1226,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1227,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1228,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1229,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1230,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1231,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1232,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1233,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1234,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1235,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1236,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1237,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1238,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1239,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1240,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1241,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1242,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1243,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1244,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1245,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1246,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1247,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1248,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1249,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1250,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1251,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1252,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1253,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1254,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1255,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1256,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1257,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1258,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1259,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1260,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1261,Foreign Key Missing
+profitandloss.xlsx,DQ-03,CRITICAL,1262,Foreign Key Missing
+profitandloss.xlsx,DQ-05,WARNING,23,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,146,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,147,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,148,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,149,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,150,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,151,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,152,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,153,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,154,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,155,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,156,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,157,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,158,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,185,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,186,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,187,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,188,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,189,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,190,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,191,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,192,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,193,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,194,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,195,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,196,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,197,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,198,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,199,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,200,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,201,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,202,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,203,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,204,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,205,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,206,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,207,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,208,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,287,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,288,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,289,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,290,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,291,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,292,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,293,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,294,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,295,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,296,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,297,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,298,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,299,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,300,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,301,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,302,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,303,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,304,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,305,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,306,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,307,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,308,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,309,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,310,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,311,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,312,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,313,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,314,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,315,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,316,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,317,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,318,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,319,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,320,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,321,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,322,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,323,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,324,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,325,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,326,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,327,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,328,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,329,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,330,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,331,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,332,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,333,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,334,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,335,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,336,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,337,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,338,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,495,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,496,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,497,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,498,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,499,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,500,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,501,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,502,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,503,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,504,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,505,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,506,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,507,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,508,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,509,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,510,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,511,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,512,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,513,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,514,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,515,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,516,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,517,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,518,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,519,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,520,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,521,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,522,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,523,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,524,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,525,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,526,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,527,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,528,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,529,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,530,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,531,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,532,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,533,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,534,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,535,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,536,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,537,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,538,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,539,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,540,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,541,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,542,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,543,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,544,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,545,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,546,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,547,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,548,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,549,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,550,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,551,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,552,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,553,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,554,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,555,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,556,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,557,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,558,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,559,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,560,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,561,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,562,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,563,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,564,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,565,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,566,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,567,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,568,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,569,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,570,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,571,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,572,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,573,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,574,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,575,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,576,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,577,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,578,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,579,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,580,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,581,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,582,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,583,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,584,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,585,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,586,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,587,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,588,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,589,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,590,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,591,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,592,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,593,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,594,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,595,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,596,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,597,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,598,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,599,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,600,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,601,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,602,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,603,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,604,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,605,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,606,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,607,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,608,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,609,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,610,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,687,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,716,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,717,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,718,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,719,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,720,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,721,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,722,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,723,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,724,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,725,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,726,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,727,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,728,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1032,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1263,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1264,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1265,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1266,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1267,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1268,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1269,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1270,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1271,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1272,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1273,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1274,Incorrect OPM%
+profitandloss.xlsx,DQ-05,WARNING,1275,Incorrect OPM%
+profitandloss.xlsx,DQ-06,CRITICAL,13,Sales must be positive
+profitandloss.xlsx,DQ-08,WARNING,26,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,38,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,39,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,40,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,74,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,76,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,77,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,83,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,92,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,151,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,199,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,201,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,203,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,215,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,216,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,238,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,243,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,246,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,290,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,292,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,293,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,366,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,398,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,436,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,450,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,519,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,631,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,676,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,677,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,678,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,679,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,680,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,706,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,710,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,744,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,746,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,808,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,847,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,849,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,856,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,859,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,908,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,910,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,911,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,924,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,975,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,985,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1053,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1058,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1080,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1146,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1171,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1181,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1182,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1183,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1184,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1185,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1203,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1204,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1216,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1217,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1219,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1223,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1247,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1248,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1269,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1270,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-08,WARNING,1274,Tax rate outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,94,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,214,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,215,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,216,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,238,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,240,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,268,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,269,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,282,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,327,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,329,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,330,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,331,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,368,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,372,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,536,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,546,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,554,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,631,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,669,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,706,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,782,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,816,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,818,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,821,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,824,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,833,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,908,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,974,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1037,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1060,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1061,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1062,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1073,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1075,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1076,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1077,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1084,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1110,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1134,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1138,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1139,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1146,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1190,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1218,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1219,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1223,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1226,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1227,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-09,WARNING,1269,Dividend payout outside 0-100%
+profitandloss.xlsx,DQ-10,WARNING,687,EPS missing
+profitandloss.xlsx,DQ-10,WARNING,729,EPS missing
+profitandloss.xlsx,DQ-10,WARNING,730,EPS missing
+profitandloss.xlsx,DQ-10,WARNING,735,EPS missing
+profitandloss.xlsx,DQ-10,WARNING,1009,EPS missing
+profitandloss.xlsx,DQ-15,WARNING,905,operating_profit not numeric
+profitandloss.xlsx,DQ-15,WARNING,906,operating_profit not numeric
+profitandloss.xlsx,DQ-15,WARNING,907,operating_profit not numeric
+profitandloss.xlsx,DQ-15,WARNING,908,operating_profit not numeric
+profitandloss.xlsx,DQ-15,WARNING,909,operating_profit not numeric
+profitandloss.xlsx,DQ-15,WARNING,910,operating_profit not numeric
+profitandloss.xlsx,DQ-15,WARNING,911,operating_profit not numeric
+profitandloss.xlsx,DQ-15,WARNING,912,operating_profit not numeric
+profitandloss.xlsx,DQ-15,WARNING,913,operating_profit not numeric
+profitandloss.xlsx,DQ-15,WARNING,914,operating_profit not numeric
+profitandloss.xlsx,DQ-15,WARNING,915,operating_profit not numeric
+profitandloss.xlsx,DQ-15,WARNING,916,operating_profit not numeric
+profitandloss.xlsx,DQ-15,WARNING,917,operating_profit not numeric
+profitandloss.xlsx,DQ-15,WARNING,13,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,24,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,905,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,906,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,907,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,908,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,909,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,910,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,911,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,912,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,913,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,914,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,915,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,916,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,917,opm_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,12,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,24,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,37,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,46,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,59,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,72,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,85,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,98,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,111,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,124,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,132,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,145,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,158,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,171,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,184,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,195,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,208,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,221,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,234,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,247,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,260,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,273,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,286,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,299,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,312,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,325,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,338,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,351,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,364,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,377,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,390,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,403,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,416,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,429,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,442,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,455,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,468,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,481,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,494,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,507,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,520,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,532,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,545,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,558,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,571,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,584,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,597,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,610,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,623,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,636,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,647,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,660,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,673,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,686,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,689,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,702,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,715,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,728,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,735,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,748,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,761,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,774,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,787,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,800,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,813,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,826,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,904,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,917,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,930,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,943,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,956,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,969,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,982,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,995,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1008,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1033,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1046,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1059,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1072,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1085,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1098,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1111,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1124,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1137,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1150,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1163,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1176,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1189,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1202,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1215,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1228,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1241,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1249,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1262,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,1275,tax_percentage not numeric
+profitandloss.xlsx,DQ-15,WARNING,687,eps not numeric
+profitandloss.xlsx,DQ-15,WARNING,729,eps not numeric
+profitandloss.xlsx,DQ-15,WARNING,730,eps not numeric
+profitandloss.xlsx,DQ-15,WARNING,735,eps not numeric
+profitandloss.xlsx,DQ-15,WARNING,1009,eps not numeric
+profitandloss.xlsx,DQ-15,WARNING,12,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,13,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,24,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,37,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,59,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,72,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,85,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,98,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,111,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,124,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,132,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,145,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,158,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,171,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,184,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,195,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,208,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,221,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,234,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,247,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,260,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,273,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,286,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,299,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,312,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,325,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,338,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,351,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,364,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,377,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,390,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,403,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,416,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,429,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,441,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,442,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,455,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,468,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,481,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,494,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,507,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,520,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,532,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,545,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,558,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,571,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,584,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,597,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,610,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,622,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,623,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,636,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,647,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,660,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,673,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,686,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,689,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,702,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,715,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,728,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,735,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,747,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,748,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,761,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,774,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,787,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,800,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,813,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,826,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,839,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,852,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,865,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,878,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,891,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,904,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,917,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,930,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,943,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,956,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,969,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,982,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,995,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1008,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1033,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1046,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1059,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1072,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1085,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1098,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1111,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1124,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1137,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1150,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1163,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1176,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1189,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1202,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1215,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1228,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1241,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1249,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1262,dividend_payout not numeric
+profitandloss.xlsx,DQ-15,WARNING,1275,dividend_payout not numeric
+profitandloss.xlsx,DQ-16,WARNING,JIOFIN,Less than 5 years data
+financial_ratios.xlsx,DQ-02,CRITICAL,2,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,4,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,6,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,8,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,10,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,12,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,14,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,16,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,18,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,20,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,22,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,66,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,67,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,68,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,69,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,70,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,71,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,72,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,73,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,74,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,75,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,76,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,77,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,114,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,116,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,118,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,120,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,122,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,124,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,126,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,128,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,130,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,132,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,134,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,136,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,138,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,140,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,142,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,144,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,146,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,148,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,150,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,152,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,154,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,156,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,158,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,160,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,850,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,851,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,852,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,853,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,855,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,856,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,857,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,858,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,860,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,861,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,862,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,863,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,865,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,866,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,867,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,868,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,870,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,871,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,872,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,873,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,875,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,876,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,877,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,878,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,880,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,881,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,882,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,883,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,885,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,886,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,887,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,888,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,890,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,891,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,892,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,893,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,895,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,896,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,897,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,898,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,900,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,901,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,902,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,903,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,905,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,906,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,907,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,908,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,910,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,912,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,914,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,916,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,918,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,920,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,922,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,924,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,926,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,928,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,930,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,932,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,1077,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,1079,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,1081,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,1083,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,1085,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,1087,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,1089,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,1091,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,1093,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,1095,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,1097,Duplicate company_id-year
+financial_ratios.xlsx,DQ-02,CRITICAL,1099,Duplicate company_id-year
+financial_ratios.xlsx,DQ-03,CRITICAL,1148,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1149,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1150,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1151,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1152,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1153,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1154,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1155,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1156,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1157,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1158,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1159,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1160,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1161,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1162,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1163,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1164,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1165,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1166,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1167,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1168,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1169,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1170,Foreign Key Missing
+financial_ratios.xlsx,DQ-03,CRITICAL,1171,Foreign Key Missing
+financial_ratios.xlsx,DQ-15,WARNING,23,net_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,23,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,849,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,850,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,851,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,852,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,853,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,854,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,855,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,856,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,857,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,858,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,859,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,860,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,861,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,862,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,863,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,864,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,865,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,866,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,867,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,868,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,869,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,870,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,871,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,872,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,873,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,874,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,875,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,876,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,877,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,878,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,879,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,880,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,881,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,882,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,883,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,884,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,885,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,886,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,887,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,888,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,889,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,890,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,891,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,892,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,893,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,894,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,895,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,896,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,897,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,898,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,899,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,900,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,901,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,902,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,903,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,904,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,905,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,906,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,907,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,908,operating_profit_margin_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,0,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,1,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,2,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,3,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,4,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,23,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,185,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,186,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,187,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,188,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,189,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,190,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,191,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,256,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,305,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,308,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,310,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,552,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,564,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,588,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,589,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,590,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,591,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,609,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,610,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,652,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,690,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,691,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,692,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,693,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,849,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,850,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,851,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,852,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,853,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,854,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,855,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,856,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,857,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,858,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,859,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,860,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,861,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,862,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,863,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,864,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,865,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,866,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,867,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,868,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,869,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,870,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,871,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,872,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,873,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,874,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,875,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,876,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,877,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,878,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,879,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,880,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,881,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,882,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,883,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,884,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,885,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,886,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,887,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,888,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,889,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,890,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,891,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,892,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,893,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,894,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,895,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,896,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,897,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,898,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,899,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,900,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,901,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,902,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,903,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,904,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,905,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,906,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,907,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,908,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,964,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,965,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,966,interest_coverage not numeric
+financial_ratios.xlsx,DQ-15,WARNING,23,asset_turnover not numeric
+financial_ratios.xlsx,DQ-15,WARNING,490,free_cash_flow_cr not numeric
+financial_ratios.xlsx,DQ-15,WARNING,491,free_cash_flow_cr not numeric
+financial_ratios.xlsx,DQ-15,WARNING,490,capex_cr not numeric
+financial_ratios.xlsx,DQ-15,WARNING,491,capex_cr not numeric
+financial_ratios.xlsx,DQ-15,WARNING,652,earnings_per_share not numeric
+financial_ratios.xlsx,DQ-15,WARNING,690,earnings_per_share not numeric
+financial_ratios.xlsx,DQ-15,WARNING,691,earnings_per_share not numeric
+financial_ratios.xlsx,DQ-15,WARNING,992,earnings_per_share not numeric
+financial_ratios.xlsx,DQ-15,WARNING,23,dividend_payout_ratio_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,434,dividend_payout_ratio_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,596,dividend_payout_ratio_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,704,dividend_payout_ratio_pct not numeric
+financial_ratios.xlsx,DQ-15,WARNING,490,cash_from_operations_cr not numeric
+financial_ratios.xlsx,DQ-15,WARNING,491,cash_from_operations_cr not numeric
+financial_ratios.xlsx,DQ-16,WARNING,JIOFIN,Less than 5 years data
+analysis.xlsx,DQ-03,CRITICAL,8,Foreign Key Missing
+analysis.xlsx,DQ-03,CRITICAL,9,Foreign Key Missing
+analysis.xlsx,DQ-03,CRITICAL,10,Foreign Key Missing
+analysis.xlsx,DQ-03,CRITICAL,12,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1457,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1458,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1459,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1460,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1461,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1462,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1463,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1464,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1465,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1466,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1467,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1468,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1469,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1470,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1471,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1472,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1473,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1474,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1475,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1476,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1477,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1478,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1479,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1480,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1481,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1482,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1483,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1484,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1485,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1486,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1487,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1488,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1489,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1490,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1491,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1492,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1493,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1494,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1495,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1496,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1497,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1498,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1499,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1500,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1501,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1502,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1503,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1504,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1505,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1506,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1507,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1508,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1509,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1510,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1511,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1512,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1513,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1514,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1515,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1516,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1517,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1518,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1519,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1520,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1521,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1522,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1523,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1524,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1525,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1526,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1527,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1528,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1529,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1530,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1531,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1532,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1533,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1534,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1535,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1536,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1537,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1538,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1539,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1540,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1541,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1542,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1543,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1544,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1545,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1546,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1547,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1548,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1549,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1550,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1551,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1552,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1553,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1554,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1555,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1556,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1557,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1558,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1559,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1560,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1561,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1562,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1563,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1564,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1565,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1566,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1567,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1568,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1569,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1570,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1571,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1572,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1573,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1574,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1575,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1576,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1577,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1578,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1579,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1580,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1581,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1582,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1583,Foreign Key Missing
+documents.xlsx,DQ-03,CRITICAL,1584,Foreign Key Missing
+prosandcons.xlsx,DQ-03,CRITICAL,11,Foreign Key Missing
+prosandcons.xlsx,DQ-03,CRITICAL,12,Foreign Key Missing

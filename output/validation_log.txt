@@ -1,0 +1,67 @@
+N100 Financial Intelligence Platform
+==================================================
+
+Validation Summary
+
+DQ-01 : Passed=92 Failed=0
+DQ-11 : Passed=92 Failed=0
+DQ-12 : Passed=91 Failed=1
+DQ-15 : Passed=92 Failed=0
+DQ-01 : Passed=1312 Failed=0
+DQ-02 : Passed=1225 Failed=87
+DQ-03 : Passed=1227 Failed=85
+DQ-04 : Passed=1312 Failed=0
+DQ-13 : Passed=1312 Failed=0
+DQ-15 : Passed=1312 Failed=0
+DQ-16 : Passed=97 Failed=1
+DQ-01 : Passed=1187 Failed=0
+DQ-02 : Passed=1164 Failed=23
+DQ-03 : Passed=1091 Failed=96
+DQ-07 : Passed=1186 Failed=1
+DQ-13 : Passed=1187 Failed=0
+DQ-15 : Passed=1187 Failed=0
+DQ-16 : Passed=99 Failed=1
+DQ-01 : Passed=1276 Failed=0
+DQ-02 : Passed=1263 Failed=13
+DQ-03 : Passed=1177 Failed=99
+DQ-05 : Passed=1042 Failed=234
+DQ-06 : Passed=1275 Failed=1
+DQ-08 : Passed=1208 Failed=68
+DQ-09 : Passed=1226 Failed=50
+DQ-10 : Passed=1271 Failed=5
+DQ-13 : Passed=1276 Failed=0
+DQ-15 : Passed=1276 Failed=0
+DQ-16 : Passed=99 Failed=1
+DQ-01 : Passed=1184 Failed=0
+DQ-02 : Passed=1065 Failed=119
+DQ-03 : Passed=1160 Failed=24
+DQ-13 : Passed=1184 Failed=0
+DQ-15 : Passed=1184 Failed=0
+DQ-16 : Passed=91 Failed=1
+DQ-01 : Passed=552 Failed=0
+DQ-02 : Passed=552 Failed=0
+DQ-03 : Passed=552 Failed=0
+DQ-13 : Passed=552 Failed=0
+DQ-15 : Passed=552 Failed=0
+DQ-16 : Passed=92 Failed=0
+DQ-01 : Passed=5520 Failed=0
+DQ-03 : Passed=5520 Failed=0
+DQ-15 : Passed=5520 Failed=0
+DQ-14 : Passed=5520 Failed=0
+DQ-01 : Passed=20 Failed=0
+DQ-03 : Passed=16 Failed=4
+DQ-15 : Passed=20 Failed=0
+DQ-01 : Passed=1585 Failed=0
+DQ-03 : Passed=1457 Failed=128
+DQ-15 : Passed=1585 Failed=0
+DQ-01 : Passed=56 Failed=0
+DQ-03 : Passed=56 Failed=0
+DQ-15 : Passed=56 Failed=0
+DQ-01 : Passed=16 Failed=0
+DQ-03 : Passed=14 Failed=2
+DQ-15 : Passed=16 Failed=0
+DQ-01 : Passed=92 Failed=0
+DQ-03 : Passed=92 Failed=0
+DQ-15 : Passed=92 Failed=0
+
+Completed Successfully.
