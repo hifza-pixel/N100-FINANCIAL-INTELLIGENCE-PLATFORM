@@ -60,3 +60,46 @@ def test_roce_normal():
 
 def test_roa_zero_assets():
     assert return_on_assets(100, 0) is None
+
+
+from src.analytics.ratios import (
+    debt_to_equity,
+    high_leverage_flag,
+    interest_coverage_ratio,
+    icr_label,
+    icr_warning_flag,
+    net_debt,
+    asset_turnover,
+)
+
+
+def test_debt_free_returns_zero():
+    assert debt_to_equity(0, 1000, 500) == 0
+
+
+def test_de_negative_equity():
+    assert debt_to_equity(500, 0, 0) is None
+
+
+def test_high_leverage_flag():
+    assert high_leverage_flag(6.2, "Industrials") is True
+
+
+def test_financial_sector_no_flag():
+    assert high_leverage_flag(6.2, "Financials") is False
+
+
+def test_icr_interest_zero():
+    assert interest_coverage_ratio(500, 50, 0) is None
+
+
+def test_icr_label():
+    assert icr_label(None) == "Debt Free"
+
+
+def test_net_debt():
+    assert net_debt(1000, 300) == 700
+
+
+def test_asset_turnover_zero_assets():
+    assert asset_turnover(1000, 0) is None

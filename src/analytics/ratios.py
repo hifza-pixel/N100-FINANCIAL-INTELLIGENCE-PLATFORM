@@ -150,4 +150,122 @@ def return_on_assets(net_profit, total_assets):
     if total_assets <= 0:
         return None
 
-    return round((net_profit / total_assets) * 100, 2) 
+    return round((net_profit / total_assets) * 100, 2)
+
+def debt_to_equity(borrowings, equity_capital, reserves):
+    """
+    Debt-to-Equity Ratio
+
+    Formula:
+        Borrowings / (Equity Capital + Reserves)
+
+    Rules:
+        • Return 0 if borrowings = 0
+        • Return None if equity <= 0
+    """
+
+    if borrowings == 0:
+        return 0
+
+    equity = equity_capital + reserves
+
+    if equity <= 0:
+        return None
+
+    return round(borrowings / equity, 2)
+
+def high_leverage_flag(de_ratio, broad_sector):
+    """
+    High leverage flag.
+
+    Rule:
+    D/E > 5 AND company is NOT Financials
+    """
+
+    if de_ratio is None:
+        return False
+
+    if broad_sector is None:
+        broad_sector = ""
+
+    if broad_sector.strip().lower() == "financials":
+        return False
+
+    return de_ratio > 5
+
+def interest_coverage_ratio(
+    operating_profit,
+    other_income,
+    interest
+):
+    """
+    Interest Coverage Ratio (ICR)
+
+    Formula:
+        (Operating Profit + Other Income) / Interest
+
+    Returns:
+        float
+        None if interest == 0
+    """
+
+    if interest == 0:
+        return None
+
+    ebit = operating_profit + other_income
+
+    return round(ebit / interest, 2)
+
+def icr_label(icr):
+    """
+    Returns display label for ICR.
+    """
+
+    if icr is None:
+        return "Debt Free"
+
+    return ""
+
+
+def icr_warning_flag(icr):
+    """
+    Company may struggle to cover interest.
+
+    Rule:
+        ICR < 1.5
+    """
+
+    if icr is None:
+        return False
+
+    return icr < 1.5
+
+def net_debt(borrowings, investments):
+    """
+    Net Debt
+
+    Formula:
+        Borrowings - Investments
+
+    Returns:
+        float
+    """
+
+    return round(borrowings - investments, 2)
+
+def asset_turnover(sales, total_assets):
+    """
+    Asset Turnover
+
+    Formula:
+        Sales / Total Assets
+
+    Returns:
+        float
+        None if total_assets <= 0
+    """
+
+    if total_assets <= 0:
+        return None
+
+    return round(sales / total_assets, 2)
