@@ -254,3 +254,13 @@ CREATE TABLE peer_groups (
     REFERENCES companies(id)
 );
 
+SELECT
+    company_id,
+    year,
+    return_on_equity_pct,
+    debt_to_equity
+FROM financial_ratios
+WHERE
+    return_on_equity_pct > 15
+    AND debt_to_equity < 1
+ORDER BY return_on_equity_pct DESC;
