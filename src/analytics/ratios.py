@@ -269,3 +269,16 @@ def asset_turnover(sales, total_assets):
         return None
 
     return round(sales / total_assets, 2)
+
+def is_financial_company(broad_sector):
+    """
+    Check whether company belongs to Financials sector.
+
+    Returns:
+        True / False
+    """
+
+    if broad_sector is None:
+        return False
+
+    return broad_sector.strip().lower() == "financials"
