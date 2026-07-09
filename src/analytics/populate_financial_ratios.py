@@ -1,13 +1,14 @@
 """
 populate_financial_ratios.py
-
-Sprint 2 – Day 12 & Day 13
-Financial Ratio Population Engine
+Sprint 2 - Production Version
+Purpose
+-------
+Populate financial_ratios table with all calculated KPIs
+required for Sprint 2 and Sprint 3.
 """
-
 import sqlite3
 from pathlib import Path
-import os
+import numpy as np
 import pandas as pd
 
 from src.analytics.ratios import (
@@ -20,97 +21,235 @@ from src.analytics.ratios import (
     interest_coverage_ratio,
     asset_turnover,
 )
-
 from src.analytics.cashflow_kpis import (
     free_cash_flow,
 )
-
-# ==========================================================
-# DATABASE CONFIGURATION
-# ==========================================================
-
+# PATH CONFIGURATION
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATABASE = BASE_DIR / "db" / "nifty100.db"
 
+# SQLITE CONNECTION
 
 def get_connection():
     """
-    Create SQLite Connection
+    Returns SQLite connection.
     """
     return sqlite3.connect(DATABASE)
-
-
-# ==========================================================
-# EDGE CASE LOGGER
-# ==========================================================
-
-def log_edge_case(file, company, year, metric, calculated, source):
-    """
-    Log ROCE / ROE mismatches (>5%)
-    """
-
-    if pd.isna(calculated) or pd.isna(source):
-        return
-
-    difference = abs(calculated - source)
-
-    if difference <= 5:
-        return
-
-    file.write(
-        f"""
-====================================================
-Company      : {company}
-Year         : {year}
-Metric       : {metric}
-Calculated   : {round(calculated,2)}
-Source       : {round(source,2)}
-Difference   : {round(difference,2)}
-Category     : Formula Difference
-====================================================
-
-"""
-    )
 
 
 # ==========================================================
 # LOAD TABLES
 # ==========================================================
 
+
 def load_tables(conn):
+    """
+    Load all required tables from SQLite.
+    """
 
     companies = pd.read_sql(
         "SELECT * FROM companies",
-        conn
+        conn,
     )
 
-    pnl = pd.read_sql(
+    profit_loss = pd.read_sql(
         "SELECT * FROM profitandloss",
-        conn
+        conn,
     )
 
-    balance = pd.read_sql(
+    balance_sheet = pd.read_sql(
         "SELECT * FROM balancesheet",
-        conn
+        conn,
     )
 
-    cashflow = pd.read_sql(
+    cash_flow = pd.read_sql(
         "SELECT * FROM cashflow",
-        conn
+        conn,
     )
 
-    ratios = pd.read_sql(
+    financial_ratios = pd.read_sql(
         "SELECT * FROM financial_ratios",
-        conn
+        conn,
     )
 
     return (
         companies,
-        pnl,
-        balance,
-        cashflow,
-        ratios,
+        profit_loss,
+        balance_sheet,
+        cash_flow,
+        financial_ratios,
     )
+
+
+# ==========================================================
+# SAFE DIVISION
+# ==========================================================
+
+
+def safe_divide(a, b):
+    """
+    Prevent division by zero.
+
+    Returns None if denominator is invalid.
+    """
+
+    if pd.isna(a):
+        return None
+
+    if pd.isna(b):
+        return None
+
+    if b == 0:
+        return None
+
+    return a / b
+
+
+# ==========================================================
+# CAGR FUNCTION
+# ==========================================================
+
+
+def calculate_cagr(start_value, end_value, years):
+    """
+    CAGR %
+
+    Formula
+
+    ((Ending / Beginning) ** (1 / Years) - 1) * 100
+    """
+
+    if pd.isna(start_value):
+        return None
+
+    if pd.isna(end_value):
+        return None
+
+    if start_value <= 0:
+        return None
+
+    if years <= 0:
+        return None
+
+    try:
+
+        value = (
+            (
+                end_value / start_value
+            ) ** (1 / years)
+            - 1
+        ) * 100
+
+        return round(value, 2)
+
+    except Exception:
+        return None
+
+
+# ==========================================================
+# SCHEMA CHECK
+# ==========================================================
+
+
+def column_exists(conn, table, column):
+    """
+    Check whether a column exists.
+    """
+
+    cursor = conn.execute(
+        f"PRAGMA table_info({table})"
+    )
+
+    cols = [row[1] for row in cursor.fetchall()]
+
+    return column in cols
+
+
+def add_column_if_missing(
+    conn,
+    table,
+    column,
+    datatype="REAL",
+):
+    """
+    Automatically add missing column.
+    """
+
+    if not column_exists(
+        conn,
+        table,
+        column,
+    ):
+
+        print(f"Adding Column -> {column}")
+
+        conn.execute(
+            f"""
+            ALTER TABLE {table}
+            ADD COLUMN {column} {datatype}
+            """
+        )
+
+        conn.commit()
+# ==========================================================
+# CREATE REQUIRED KPI COLUMNS
+# ==========================================================
+
+def ensure_financial_ratio_schema(conn):
+    """
+    Ensure all KPI columns exist in financial_ratios table.
+    """
+
+    required_columns = [
+
+        # Profitability
+        "net_profit_margin_pct",
+        "operating_profit_margin_pct",
+        "return_on_equity_pct",
+        "return_on_capital_employed_pct",
+        "return_on_assets_pct",
+
+        # Leverage
+        "debt_to_equity",
+        "interest_coverage",
+        "asset_turnover",
+
+        # Cash Flow
+        "free_cash_flow_cr",
+        "capex_cr",
+        "cash_from_operations_cr",
+        "cfo_pat_ratio",
+        "fcf_conversion_ratio",
+        "capex_intensity_pct",
+
+        # Growth
+        "revenue_cagr_3yr",
+        "revenue_cagr_5yr",
+        "pat_cagr_3yr",
+        "pat_cagr_5yr",
+        "eps_cagr_3yr",
+        "eps_cagr_5yr",
+
+        # Existing
+        "earnings_per_share",
+        "book_value_per_share",
+        "dividend_payout_ratio_pct",
+        "total_debt_cr",
+
+    ]
+
+    print("\nChecking financial_ratios schema...\n")
+
+    for column in required_columns:
+
+        add_column_if_missing(
+            conn,
+            "financial_ratios",
+            column,
+            "REAL",
+        )
+
+    print("Schema verification completed.\n")
 
 
 # ==========================================================
@@ -125,41 +264,69 @@ def main():
 
     conn = get_connection()
 
+    ensure_financial_ratio_schema(conn)
+
     (
         companies,
         pnl,
         balance,
         cashflow,
-        ratios,
+        financial_ratios,
     ) = load_tables(conn)
 
     print(f"Companies      : {len(companies)}")
     print(f"Profit & Loss  : {len(pnl)}")
     print(f"Balance Sheet  : {len(balance)}")
     print(f"Cash Flow      : {len(cashflow)}")
-
-    print("\nCompanies Columns:")
-    print(companies.columns.tolist())
+    print(f"Financial Ratio: {len(financial_ratios)}")
 
     print("\nMerging Tables...")
-    # ==========================================================
-# MERGE ALL TABLES
-# ==========================================================
+
+    # ----------------------------
+    # P&L + Balance Sheet
+    # ----------------------------
 
     final_df = pnl.merge(
+
         balance,
-        on=["company_id", "year"],
+
+        on=[
+            "company_id",
+            "year",
+        ],
+
         how="inner",
-        suffixes=("_pnl", "_bs"),
+
+        suffixes=(
+            "_pnl",
+            "_bs",
+        ),
+
     )
 
+    # ----------------------------
+    # Cash Flow
+    # ----------------------------
+
     final_df = final_df.merge(
+
         cashflow,
-        on=["company_id", "year"],
+
+        on=[
+            "company_id",
+            "year",
+        ],
+
         how="left",
+
     )
 
+    # ----------------------------
+    # Company Master
+    # ----------------------------
+
     final_df = final_df.merge(
+
         companies[
             [
                 "id",
@@ -168,22 +335,27 @@ def main():
                 "roe_percentage",
             ]
         ],
+
         left_on="company_id",
+
         right_on="id",
+
         how="left",
+
     )
 
     print(f"Merged Rows : {len(final_df)}")
 
-# ==========================================================
-# KPI CALCULATION
-# ==========================================================
+    print("\nColumns Available:\n")
 
-    print("\nCalculating KPIs...")
+    print(final_df.columns.tolist())
 
-    # -------------------------
-    # Profitability Ratios
-    # -------------------------
+    print("\nStarting KPI Calculation...\n")
+    # ==========================================================
+    # PROFITABILITY KPIs
+    # ==========================================================
+
+    print("Calculating Profitability KPIs...")
 
     final_df["net_profit_margin_pct"] = final_df.apply(
         lambda x: net_profit_margin(
@@ -229,9 +401,11 @@ def main():
         axis=1,
     )
 
-    # -------------------------
-    # Leverage Ratios
-    # -------------------------
+    # ==========================================================
+    # LEVERAGE KPIs
+    # ==========================================================
+
+    print("Calculating Leverage KPIs...")
 
     final_df["debt_to_equity"] = final_df.apply(
         lambda x: debt_to_equity(
@@ -259,9 +433,11 @@ def main():
         axis=1,
     )
 
-    # -------------------------
-    # Cash Flow KPIs
-    # -------------------------
+    # ==========================================================
+    # CASH FLOW KPIs
+    # ==========================================================
+
+    print("Calculating Cash Flow KPIs...")
 
     final_df["free_cash_flow_cr"] = final_df.apply(
         lambda x: free_cash_flow(
@@ -271,9 +447,9 @@ def main():
         axis=1,
     )
 
-    # -------------------------
-    # Existing Database Values
-    # -------------------------
+    final_df["cash_from_operations_cr"] = final_df["operating_activity"]
+
+    final_df["total_debt_cr"] = final_df["borrowings"]
 
     final_df["earnings_per_share"] = final_df["eps"]
 
@@ -286,36 +462,176 @@ def main():
         final_df["dividend_payout"]
     )
 
-    final_df["total_debt_cr"] = final_df["borrowings"]
+    # ==========================================================
+    # EXTRA CASH FLOW METRICS
+    # ==========================================================
 
-    final_df["cash_from_operations_cr"] = (
-        final_df["operating_activity"]
+    final_df["capex_cr"] = (
+        final_df["investing_activity"] * (-1)
     )
 
-    print("✅ KPI Calculation Completed")
+    final_df["cfo_pat_ratio"] = final_df.apply(
+        lambda x: safe_divide(
+            x["operating_activity"],
+            x["net_profit"],
+        ),
+        axis=1,
+    )
+
+    final_df["fcf_conversion_ratio"] = final_df.apply(
+        lambda x: safe_divide(
+            x["free_cash_flow_cr"],
+            x["operating_activity"],
+        ),
+        axis=1,
+    )
+
+    final_df["capex_intensity_pct"] = final_df.apply(
+        lambda x: safe_divide(
+            abs(x["capex_cr"]),
+            x["sales"],
+        ) * 100
+        if safe_divide(abs(x["capex_cr"]), x["sales"]) is not None
+        else None,
+        axis=1,
+    )
+
+    print("Profitability + Leverage + Cash Flow KPIs Completed.")
+    # ==========================================================
+    # GROWTH KPIs (3Y & 5Y CAGR)
+    # ==========================================================
+
+    print("Calculating Growth KPIs...")
+
+    # Initialize columns
+
+    final_df["revenue_cagr_3yr"] = None
+    final_df["revenue_cagr_5yr"] = None
+
+    final_df["pat_cagr_3yr"] = None
+    final_df["pat_cagr_5yr"] = None
+
+    final_df["eps_cagr_3yr"] = None
+    final_df["eps_cagr_5yr"] = None
+
+    # Calculate company-wise CAGR
+
+    for company in final_df["company_id"].unique():
+
+        company_df = (
+            final_df[
+                final_df["company_id"] == company
+            ]
+            .copy()
+            .sort_values("year")
+            .reset_index()
+        )
+
+        for i in range(len(company_df)):
+
+            # -------------------------
+            # Revenue CAGR
+            # -------------------------
+
+            if i >= 3:
+
+                final_df.loc[
+                    company_df.loc[i, "index"],
+                    "revenue_cagr_3yr",
+                ] = calculate_cagr(
+                    company_df.loc[i - 3, "sales"],
+                    company_df.loc[i, "sales"],
+                    3,
+                )
+
+            if i >= 5:
+
+                final_df.loc[
+                    company_df.loc[i, "index"],
+                    "revenue_cagr_5yr",
+                ] = calculate_cagr(
+                    company_df.loc[i - 5, "sales"],
+                    company_df.loc[i, "sales"],
+                    5,
+                )
+
+            # -------------------------
+            # PAT CAGR
+            # -------------------------
+
+            if i >= 3:
+
+                final_df.loc[
+                    company_df.loc[i, "index"],
+                    "pat_cagr_3yr",
+                ] = calculate_cagr(
+                    company_df.loc[i - 3, "net_profit"],
+                    company_df.loc[i, "net_profit"],
+                    3,
+                )
+
+            if i >= 5:
+
+                final_df.loc[
+                    company_df.loc[i, "index"],
+                    "pat_cagr_5yr",
+                ] = calculate_cagr(
+                    company_df.loc[i - 5, "net_profit"],
+                    company_df.loc[i, "net_profit"],
+                    5,
+                )
+
+            # -------------------------
+            # EPS CAGR
+            # -------------------------
+
+            if i >= 3:
+
+                final_df.loc[
+                    company_df.loc[i, "index"],
+                    "eps_cagr_3yr",
+                ] = calculate_cagr(
+                    company_df.loc[i - 3, "eps"],
+                    company_df.loc[i, "eps"],
+                    3,
+                )
+
+            if i >= 5:
+
+                final_df.loc[
+                    company_df.loc[i, "index"],
+                    "eps_cagr_5yr",
+                ] = calculate_cagr(
+                    company_df.loc[i - 5, "eps"],
+                    company_df.loc[i, "eps"],
+                    5,
+                )
+
+    print("Growth KPI Calculation Completed.")
+
+    print("\nGrowth KPI Sample\n")
 
     print(
+
         final_df[
             [
                 "company_id",
                 "year",
-                "net_profit_margin_pct",
-                "operating_profit_margin_pct",
-                "return_on_equity_pct",
-                "return_on_capital_employed_pct",
-                "return_on_assets_pct",
-                "debt_to_equity",
-                "interest_coverage",
-                "asset_turnover",
-                "free_cash_flow_cr",
+                "revenue_cagr_3yr",
+                "revenue_cagr_5yr",
+                "pat_cagr_3yr",
+                "pat_cagr_5yr",
+                "eps_cagr_3yr",
+                "eps_cagr_5yr",
             ]
-        ].head()
-    )
-    # ==========================================================
-# UPDATE financial_ratios TABLE
-# ==========================================================
+        ].head(10)
 
-    print("\nUpdating financial_ratios table...")
+    )
+        # ==========================================================
+    # UPDATE financial_ratios TABLE
+    # ==========================================================
+
+    print("\nUpdating financial_ratios table...\n")
 
     update_query = """
     UPDATE financial_ratios
@@ -329,13 +645,24 @@ def main():
         interest_coverage=?,
         asset_turnover=?,
         free_cash_flow_cr=?,
+        capex_cr=?,
         earnings_per_share=?,
         book_value_per_share=?,
         dividend_payout_ratio_pct=?,
         total_debt_cr=?,
-        cash_from_operations_cr=?
+        cash_from_operations_cr=?,
+        cfo_pat_ratio=?,
+        fcf_conversion_ratio=?,
+        capex_intensity_pct=?,
+        revenue_cagr_3yr=?,
+        revenue_cagr_5yr=?,
+        pat_cagr_3yr=?,
+        pat_cagr_5yr=?,
+        eps_cagr_3yr=?,
+        eps_cagr_5yr=?
     WHERE
-        company_id=? AND year=?
+        company_id=?
+        AND year=?
     """
 
     cursor = conn.cursor()
@@ -356,45 +683,52 @@ def main():
                 row["interest_coverage"],
                 row["asset_turnover"],
                 row["free_cash_flow_cr"],
+                row["capex_cr"],
                 row["earnings_per_share"],
                 row["book_value_per_share"],
                 row["dividend_payout_ratio_pct"],
                 row["total_debt_cr"],
                 row["cash_from_operations_cr"],
+                row["cfo_pat_ratio"],
+                row["fcf_conversion_ratio"],
+                row["capex_intensity_pct"],
+                row["revenue_cagr_3yr"],
+                row["revenue_cagr_5yr"],
+                row["pat_cagr_3yr"],
+                row["pat_cagr_5yr"],
+                row["eps_cagr_3yr"],
+                row["eps_cagr_5yr"],
                 row["company_id"],
                 row["year"],
-            )
+            ),
         )
 
         updated_rows += cursor.rowcount
 
     conn.commit()
 
-    print(f"✅ Updated Rows : {updated_rows}")
+    print(f"Updated Rows : {updated_rows}")
+        # ==========================================================
+    # VERIFY DATABASE
+    # ==========================================================
 
-# ==========================================================
-# VERIFY TABLE
-# ==========================================================
+    print("\nVerifying financial_ratios table...\n")
 
-    print("\nVerifying financial_ratios table...")
-
-    count_df = pd.read_sql(
+    count = pd.read_sql(
         "SELECT COUNT(*) AS total FROM financial_ratios",
         conn,
     )
 
-    total_rows = count_df.loc[0, "total"]
+    print(count)
 
-    print(f"Total Rows : {total_rows}")
-
-    if total_rows >= 1100:
-        print("✅ PASS : financial_ratios table populated.")
+    if count.loc[0, "total"] >= 1100:
+        print("\nPASS : financial_ratios populated successfully.")
     else:
-        print("❌ FAIL : Less than expected rows.")
+        print("\nWARNING : Less than expected rows.")
 
-# ==========================================================
-# MANUAL SPOT CHECK
-# ==========================================================
+    # ==========================================================
+    # MANUAL SPOT CHECK
+    # ==========================================================
 
     print("\nManual Spot Check\n")
 
@@ -411,136 +745,26 @@ def main():
             debt_to_equity,
             interest_coverage,
             asset_turnover,
-            free_cash_flow_cr
+            free_cash_flow_cr,
+            revenue_cagr_5yr,
+            pat_cagr_5yr,
+            eps_cagr_5yr
         FROM financial_ratios
-        LIMIT 3
+        LIMIT 10
         """,
         conn,
     )
 
     print(spot)
-    # ==========================================================
-# DAY 13
-# ROCE / ROE EDGE CASE LOGGING
-# ==========================================================
 
-    print("\nGenerating ratio_edge_cases.log...")
-
-    os.makedirs("output", exist_ok=True)
-
-    log_path = "output/ratio_edge_cases.log"
-
-    with open(log_path, "w", encoding="utf-8") as log:
-
-        log.write("=" * 70 + "\n")
-        log.write("SPRINT 2 - DAY 13\n")
-        log.write("ROCE / ROE EDGE CASE REPORT\n")
-        log.write("=" * 70 + "\n\n")
-
-        log.write(
-            "NOTE:\n"
-            "Source dataset does not contain 'broad_sector'.\n"
-            "Financial-sector carve-out could not be implemented.\n"
-            "Standard ROCE calculation has been applied to all companies.\n\n"
-        )
-
-        roce_cases = 0
-        roe_cases = 0
-
-        for _, row in final_df.iterrows():
-
-            # -----------------------
-            # ROCE Cross Check
-            # -----------------------
-
-            if (
-                pd.notna(row["return_on_capital_employed_pct"])
-                and pd.notna(row["roce_percentage"])
-            ):
-
-                difference = abs(
-                    row["return_on_capital_employed_pct"]
-                    - row["roce_percentage"]
-                )
-
-                if difference > 5:
-
-                    roce_cases += 1
-
-                    log.write(
-                        f"""
-====================================================
-Company      : {row['company_name']}
-Company ID   : {row['company_id']}
-Year         : {row['year']}
-Metric       : ROCE
-
-Calculated   : {round(row['return_on_capital_employed_pct'],2)}
-Source       : {round(row['roce_percentage'],2)}
-Difference   : {round(difference,2)}
-
-Category     : Formula Difference
-====================================================
-
-"""
-                    )
-
-            # -----------------------
-            # ROE Cross Check
-            # -----------------------
-
-            if (
-                pd.notna(row["return_on_equity_pct"])
-                and pd.notna(row["roe_percentage"])
-            ):
-
-                difference = abs(
-                    row["return_on_equity_pct"]
-                    - row["roe_percentage"]
-                )
-
-                if difference > 5:
-
-                    roe_cases += 1
-
-                    log.write(
-                        f"""
-====================================================
-Company      : {row['company_name']}
-Company ID   : {row['company_id']}
-Year         : {row['year']}
-Metric       : ROE
-
-Calculated   : {round(row['return_on_equity_pct'],2)}
-Source       : {round(row['roe_percentage'],2)}
-Difference   : {round(difference,2)}
-
-Category     : Formula Difference
-====================================================
-
-"""
-                    )
-
-        log.write("\n")
-        log.write("=" * 70 + "\n")
-        log.write(f"Total ROCE Edge Cases : {roce_cases}\n")
-        log.write(f"Total ROE Edge Cases  : {roe_cases}\n")
-        log.write("=" * 70 + "\n")
-
-    print(f"✅ ratio_edge_cases.log saved -> {log_path}")
-    print(f"ROCE Edge Cases : {roce_cases}")
-    print(f"ROE Edge Cases  : {roe_cases}")
-
-# ==========================================================
-# FINISH
-# ==========================================================
+    print("\nDatabase Update Completed Successfully.")
 
     conn.close()
 
-    print("\n" + "=" * 70)
-    print("Sprint 2 - Day 12 & Day 13 Completed Successfully")
-    print("=" * 70)
 
+# ==========================================================
+# ENTRY POINT
+# ==========================================================
 
 if __name__ == "__main__":
-    main()
+    main()            

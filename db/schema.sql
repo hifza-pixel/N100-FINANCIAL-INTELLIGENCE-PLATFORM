@@ -264,3 +264,12 @@ WHERE
     return_on_equity_pct > 15
     AND debt_to_equity < 1
 ORDER BY return_on_equity_pct DESC;
+ALTER TABLE financial_ratios ADD COLUMN revenue_cagr_5yr REAL;
+
+ALTER TABLE financial_ratios ADD COLUMN pat_cagr_5yr REAL;
+
+ALTER TABLE financial_ratios ADD COLUMN eps_cagr_5yr REAL;
+
+ALTER TABLE financial_ratios ADD COLUMN return_on_capital_employed_pct REAL;
+
+ALTER TABLE financial_ratios ADD COLUMN return_on_assets_pct REAL;

@@ -11,6 +11,9 @@ import os
 DATABASE = "db/nifty100.db"
 DATA_PATH = "data/raw"
 
+
+print("Database Path Used:")
+print(os.path.abspath(DATABASE))
 TITLE_FILES = [
     "analysis.xlsx",
     "balancesheet.xlsx",
@@ -32,8 +35,8 @@ FILES = {
     "analysis.xlsx": "analysis",
     "documents.xlsx": "documents",
     "prosandcons.xlsx": "prosandcons",
-    "sectors.xlsx": "sectors",
-    "stock_prices.xlsx": "stock_prices"
+    "sectors.xlsx": "sectors"
+    
 }
 
 
@@ -68,6 +71,7 @@ def main():
         rows=len(df)
 
         df.to_sql(table,conn,if_exists="replace",index=False)
+        conn.commit()
 
         audit.append({
             "table":table,
@@ -85,7 +89,7 @@ def main():
         index=False
     )
 
-    conn.commit()
+    
 
     conn.close()
 
