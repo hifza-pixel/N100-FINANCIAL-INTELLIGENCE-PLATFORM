@@ -1,7 +1,10 @@
 from pathlib import Path
 import sqlite3
+import os
 import pandas as pd
 import yaml
+from openpyxl.styles import PatternFill, Font
+from openpyxl.utils import get_column_letter
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 
@@ -9,86 +12,132 @@ DATABASE = BASE_DIR / "db" / "nifty100.db"
 
 CONFIG = BASE_DIR / "config" / "screener_config.yaml"
 
-
-# ==========================
-# Load YAML Config
-# ==========================
-
 def load_config():
+    """
+    Load YAML Configuration
+    """
 
     with open(CONFIG, "r") as file:
         return yaml.safe_load(file)
 
 
-# ==========================
-# Load financial_ratios table
-# ==========================
+def get_connection():
+    return sqlite3.connect(DATABASE)
+
 
 def load_financial_ratios():
 
-    conn = sqlite3.connect(DATABASE)
+    print("Database Path:", DATABASE)
+    print("Database Exists:", DATABASE.exists())
+
+    conn = get_connection()
+
+    print(pd.read_sql("SELECT COUNT(*) AS total FROM financial_ratios", conn))
 
     df = pd.read_sql(
         "SELECT * FROM financial_ratios",
         conn,
     )
 
-    print("Rows in financial_ratios:", len(df))
-    print(df.head())
-    print(df.columns.tolist())
     conn.close()
 
+    print("Rows Loaded:", len(df))
+
     return df
-def apply_filters(df, config):
+
+
+# ==============================
+# Helper
+# ==============================
+
+def has_column(df, column):
     """
-    Apply Screener Filters from YAML Config
+    Check whether column exists.
     """
 
-    filters = config["filters"]
+    return column in df.columns
+
+
+# ==============================
+# Generic Filter Engine
+# ==============================
+
+def apply_filters(df, filters):
+    """
+    Apply filters dynamically.
+    """
 
     result = df.copy()
 
+    # --------------------------
     # ROE
-    if "roe_min" in filters:
+    # --------------------------
+
+    if (
+        "roe_min" in filters
+        and has_column(result, "return_on_equity_pct")
+    ):
+
         result = result[
-            result["return_on_equity_pct"] >= filters["roe_min"]
+            result["return_on_equity_pct"]
+            >= filters["roe_min"]
         ]
 
+    # --------------------------
     # Debt to Equity
-    if "debt_to_equity_max" in filters:
+    # --------------------------
+
+    if (
+        "debt_to_equity_max" in filters
+        and has_column(result, "debt_to_equity")
+    ):
+
         result = result[
-            result["debt_to_equity"] <= filters["debt_to_equity_max"]
+            result["debt_to_equity"]
+            <= filters["debt_to_equity_max"]
         ]
 
+    # --------------------------
     # Free Cash Flow
-    if "free_cash_flow_min" in filters:
+    # --------------------------
+
+    if (
+        "free_cash_flow_min" in filters
+        and has_column(result, "free_cash_flow_cr")
+    ):
+
         result = result[
-            result["free_cash_flow_cr"] >= filters["free_cash_flow_min"]
+            result["free_cash_flow_cr"]
+            >= filters["free_cash_flow_min"]
         ]
 
-    # Revenue CAGR
-    if "revenue_cagr_5yr_min" in filters and "revenue_cagr_5yr" in result.columns:
-        result = result[
-            result["revenue_cagr_5yr"] >= filters["revenue_cagr_5yr_min"]
-        ]
-
-    # PAT CAGR
-    if "pat_cagr_5yr_min" in filters and "pat_cagr_5yr" in result.columns:
-        result = result[
-            result["pat_cagr_5yr"] >= filters["pat_cagr_5yr_min"]
-        ]
-
+    # --------------------------
     # Operating Profit Margin
-    if "operating_profit_margin_min" in filters:
+    # --------------------------
+
+    if (
+        "operating_profit_margin_min" in filters
+        and has_column(result, "operating_profit_margin_pct")
+    ):
+
         result = result[
-            result["operating_profit_margin_pct"] >= filters["operating_profit_margin_min"]
+            result["operating_profit_margin_pct"]
+            >= filters["operating_profit_margin_min"]
         ]
 
+    # --------------------------
     # Interest Coverage
-    if "interest_coverage_min" in filters:
+    # --------------------------
+
+    if (
+        "interest_coverage_min" in filters
+        and has_column(result, "interest_coverage")
+    ):
+
         result = result[
             (
-                result["interest_coverage"] >= filters["interest_coverage_min"]
+                result["interest_coverage"]
+                >= filters["interest_coverage_min"]
             )
             |
             (
@@ -96,380 +145,701 @@ def apply_filters(df, config):
             )
         ]
 
+    # --------------------------
     # Asset Turnover
-    if "asset_turnover_min" in filters:
+    # --------------------------
+
+    if (
+        "asset_turnover_min" in filters
+        and has_column(result, "asset_turnover")
+    ):
+
         result = result[
-            result["asset_turnover"] >= filters["asset_turnover_min"]
+            result["asset_turnover"]
+            >= filters["asset_turnover_min"]
         ]
 
-    # Net Profit
-    if "net_profit_min" in filters and "net_profit" in result.columns:
-        result = result[
-            result["net_profit"] >= filters["net_profit_min"]
-        ]
-
+    # --------------------------
     # Sales
-    if "sales_min" in filters and "sales" in result.columns:
-        result = result[
-            result["sales"] >= filters["sales_min"]
-        ]
-
-    return result.reset_index(drop=True)
-def apply_preset(df, preset_filters):
-
-    result = df.copy()
-
-    if "roe_min" in preset_filters:
-        result = result[
-            result["return_on_equity_pct"] >= preset_filters["roe_min"]
-        ]
-
-    if "debt_to_equity_max" in preset_filters:
-        result = result[
-            result["debt_to_equity"] <= preset_filters["debt_to_equity_max"]
-        ]
-
-    if "free_cash_flow_min" in preset_filters:
-        result = result[
-            result["free_cash_flow_cr"] >= preset_filters["free_cash_flow_min"]
-        ]
+    # --------------------------
 
     if (
-        "revenue_cagr_5yr_min" in preset_filters
-        and "revenue_cagr_5yr" in result.columns
+        "sales_min" in filters
+        and has_column(result, "sales")
     ):
+
         result = result[
-            result["revenue_cagr_5yr"] >= preset_filters["revenue_cagr_5yr_min"]
+            result["sales"]
+            >= filters["sales_min"]
         ]
+
+    # --------------------------
+    # Net Profit
+    # --------------------------
 
     if (
-        "pat_cagr_5yr_min" in preset_filters
-        and "pat_cagr_5yr" in result.columns
+        "net_profit_min" in filters
+        and has_column(result, "net_profit")
     ):
-        result = result[
-            result["pat_cagr_5yr"] >= preset_filters["pat_cagr_5yr_min"]
-        ]
 
-    if (
-        "sales_min" in preset_filters
-        and "sales" in result.columns
-    ):
         result = result[
-            result["sales"] >= preset_filters["sales_min"]
-        ]
-    # Dividend Yield
-    if (
-        "dividend_yield_min" in preset_filters
-        and "dividend_yield" in result.columns
-    ):
-        result = result[
-            result["dividend_yield"] >= preset_filters["dividend_yield_min"]
-        ]
-
-# Dividend Payout
-    if "dividend_payout_max" in preset_filters:
-        result = result[
-            result["dividend_payout_ratio_pct"]
-            <= preset_filters["dividend_payout_max"]
-        ]
-
-# Free Cash Flow
-    if "free_cash_flow_min" in preset_filters:
-        result = result[
-            result["free_cash_flow_cr"]
-            >= preset_filters["free_cash_flow_min"]
+            result["net_profit"]
+            >= filters["net_profit_min"]
         ]
     return result.reset_index(drop=True)
-    # PE Ratio
-    if (
-        "pe_max" in preset_filters
-        and "pe_ratio" in result.columns
-    ):
-        result = result[
-            result["pe_ratio"] <= preset_filters["pe_max"]
-        ]
 
-    # PB Ratio
-    if (
-        "pb_max" in preset_filters
-        and "pb_ratio" in result.columns
-    ):
-        result = result[
-            result["pb_ratio"] <= preset_filters["pb_max"]
-        ]
-
-    # Dividend Yield
-    if (
-        "dividend_yield_min" in preset_filters
-        and "dividend_yield" in result.columns
-    ):
-        result = result[
-            result["dividend_yield"] >= preset_filters["dividend_yield_min"]
-        ]
-def calculate_composite_score(df):
+def normalize(series):
     """
-    Basic Composite Quality Score (Day 15)
-
-    Day 17 me isko weighted scoring se replace karenge.
+    Normalize values between 0 and 100.
     """
 
-    result = df.copy()
+    if series.empty:
+        return series
 
-    metrics = [
-        "return_on_equity_pct",
-        "operating_profit_margin_pct",
-        "asset_turnover",
-        "interest_coverage",
-        "free_cash_flow_cr",
-    ]
+    minimum = series.min()
+    maximum = series.max()
 
-    for metric in metrics:
+    if minimum == maximum:
+        return pd.Series(
+            [50] * len(series),
+            index=series.index,
+        )
 
-        if metric not in result.columns:
-            continue
-
-        minimum = result[metric].min()
-        maximum = result[metric].max()
-
-        if minimum == maximum:
-
-            result[metric + "_score"] = 50
-
-        else:
-
-            result[metric + "_score"] = (
-                (
-                    result[metric] - minimum
-                )
-                /
-                (
-                    maximum - minimum
-                )
-            ) * 100
-
-    score_columns = [
-        col
-        for col in result.columns
-        if col.endswith("_score")
-    ]
-
-    result["composite_quality_score"] = (
-        result[score_columns]
-        .mean(axis=1)
-        .round(2)
+    return (
+        (
+            (series - minimum)
+            /
+            (maximum - minimum)
+        ) * 100
     )
 
+def winsorize(series):
+    """
+    Clip values between 10th and 90th percentile.
+    """
+
+    p10 = series.quantile(0.10)
+    p90 = series.quantile(0.90)
+
+    return series.clip(lower=p10, upper=p90)
+def calculate_composite_score(df):
+   
+    result = df.copy()
+
+    required = [
+
+        "return_on_equity_pct",
+
+        "return_on_capital_employed_pct",
+
+        "net_profit_margin_pct",
+
+        "free_cash_flow_cr",
+
+        "debt_to_equity",
+
+        "interest_coverage",
+
+        "asset_turnover",
+
+    ]
+
+    # -----------------------
+    # Missing Columns
+    # -----------------------
+
+    for col in required:
+
+        if col not in result.columns:
+
+            result[col] = 0
+
+    # -----------------------
+    # Convert Numeric
+    # -----------------------
+
+    for col in required:
+
+        result[col] = pd.to_numeric(
+            result[col],
+            errors="coerce",
+        ).fillna(0)
+
+    # -----------------------
+    # Winsorisation
+    # -----------------------
+
+    for col in required:
+
+        result[col] = winsorize(
+            result[col]
+        )
+
+    # -----------------------
+    # Normalize Scores
+    # -----------------------
+
+    result["roe_score"] = normalize(
+        result["return_on_equity_pct"]
+    )
+
+    result["roce_score"] = normalize(
+        result["return_on_capital_employed_pct"]
+    )
+
+    result["npm_score"] = normalize(
+        result["net_profit_margin_pct"]
+    )
+
+    result["fcf_score"] = normalize(
+        result["free_cash_flow_cr"]
+    )
+
+    result["asset_score"] = normalize(
+        result["asset_turnover"]
+    )
+
+    result["icr_score"] = normalize(
+        result["interest_coverage"]
+    )
+
+    # -----------------------
+    # Debt Score
+    # Lower is Better
+    # -----------------------
+
+    result["de_score"] = 100 - normalize(
+        result["debt_to_equity"]
+    )
+
+    # -----------------------
+    # Growth Scores
+    # -----------------------
+
+    if "revenue_cagr_5yr" in result.columns:
+
+        result["revenue_growth_score"] = normalize(
+
+            winsorize(
+
+                pd.to_numeric(
+                    result["revenue_cagr_5yr"],
+                    errors="coerce",
+                ).fillna(0)
+
+            )
+
+        )
+
+    else:
+
+        result["revenue_growth_score"] = 50
+
+    if "pat_cagr_5yr" in result.columns:
+
+        result["pat_growth_score"] = normalize(
+
+            winsorize(
+
+                pd.to_numeric(
+                    result["pat_cagr_5yr"],
+                    errors="coerce",
+                ).fillna(0)
+
+            )
+
+        )
+
+    else:
+
+        result["pat_growth_score"] = 50
+
+    # -----------------------
+    # Final Weighted Score
+    # -----------------------
+
+    result["composite_quality_score"] = (
+
+        result["roe_score"] * 0.15
+
+        + result["roce_score"] * 0.10
+
+        + result["npm_score"] * 0.10
+
+        + result["fcf_score"] * 0.30
+
+        + result["revenue_growth_score"] * 0.10
+
+        + result["pat_growth_score"] * 0.10
+
+        + result["de_score"] * 0.10
+
+        + result["icr_score"] * 0.03
+
+        + result["asset_score"] * 0.02
+
+    )
+
+    # -----------------------
+    # Final Normalize
+    # -----------------------
+
+    result["composite_quality_score"] = normalize(
+        result["composite_quality_score"]
+    ).round(2)
+
     return result
-# ==========================
-# Main
-# ==========================
+def apply_preset(df, config, preset_name):
+   
 
-if __name__ == "__main__":
+    presets = config["filters"]
 
-    config = load_config()
+    if preset_name not in presets:
 
-    df = load_financial_ratios()
+        raise ValueError(
+            f"{preset_name} not found."
+        )
 
-    print("Original Rows :", len(df))
+    preset = presets[preset_name]
 
-    filtered = apply_filters(df, config)
+    result = apply_filters(
+        df,
+        preset,
+    )
 
-    print("Filtered Rows :", len(filtered))
+    result = calculate_composite_score(result)
 
-    print(filtered.head())
-    filtered = calculate_composite_score(filtered)
-
-    filtered = filtered.sort_values(
+    result = result.sort_values(
         by="composite_quality_score",
         ascending=False,
     ).reset_index(drop=True)
-    print("\nTop Companies\n")
+
+    return result
+
+
+# ==============================
+# Display Helper
+# ==============================
+
+def show_result(title, df):
+
+    print("\n" + "=" * 60)
+
+    print(title)
+
+    print("=" * 60)
+
+    print(f"Companies : {len(df)}")
+
+    if len(df) == 0:
+
+        print("No companies found.")
+
+        return
+
+    columns = [
+
+        "company_id",
+
+        "year",
+
+        "return_on_equity_pct",
+
+        "debt_to_equity",
+
+        "composite_quality_score",
+
+    ]
+
+    available = [
+
+        c
+
+        for c in columns
+
+        if c in df.columns
+
+    ]
+
+    print(df[available].head(10))
+    # ==============================
+# Main
+# ==============================
+
+def main():
+
+    print("=" * 70)
+    print("Sprint 3 - Screener Engine")
+    print("=" * 70)
+
+    # -------------------------
+    # Load Config
+    # -------------------------
+
     config = load_config()
 
-    quality = apply_preset(
-        df,
-        config["filters"]["quality_compounder"]
-    )
-    print("Database Path:", DATABASE.resolve())
-    print("\nQuality Compounder")
 
-    print(len(quality))
+    df = load_financial_ratios()
 
-    print(
-        quality[
-            [
+    print("\nOriginal Rows :", len(df))
+    if "default" in config["filters"]:
+
+        filtered = apply_filters(
+            df,
+            config["filters"]["default"],
+        )
+
+        filtered = calculate_composite_score(filtered)
+
+        filtered = filtered.sort_values(
+            by="composite_quality_score",
+            ascending=False,
+        )
+
+        show_result(
+            "Default Screener",
+            filtered,
+        )
+    presets = [
+        "quality_compounder",
+        "value_pick",
+        "growth_accelerator",
+        "dividend_champion",
+        "debt_free_blue_chip",
+        "turnaround_watch",
+
+    ]
+    results = {}
+    for preset in presets:
+
+        try:
+
+            result = apply_preset(df,config,preset, )
+            results[preset] = result
+            show_result(
+                preset.replace("_", " ").title(),
+                result,
+            )
+        except Exception as e:
+            print(f"\n {preset}")
+            print(e)
+
+    print("\n" + "=" * 70)
+    print("All Screeners Completed")
+    print("=" * 70)
+    export_screeners(results)
+    print("\nSprint 3 Day 17 Completed")
+    return results
+
+OUTPUT_DIR = BASE_DIR / "output"
+
+
+def export_screeners(results):
+    """
+    Export all preset screeners to Excel
+    Sprint 3 – Day 17
+    """
+
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    output_file = OUTPUT_DIR / "screener_output.xlsx"
+
+    # ===============================
+    # Excel Writer
+    # ===============================
+
+    with pd.ExcelWriter(
+        output_file,
+        engine="openpyxl",
+    ) as writer:
+
+        # ===============================
+        # Presets
+        # ===============================
+
+        for preset, df in results.items():
+
+            if df.empty:
+                continue
+
+            export_columns = [
+
                 "company_id",
                 "year",
+
                 "return_on_equity_pct",
+                "return_on_capital_employed_pct",
+
+                "net_profit_margin_pct",
+
                 "debt_to_equity",
+
+                "interest_coverage",
+
+                "asset_turnover",
+
+                "free_cash_flow_cr",
+
+                "earnings_per_share",
+
+                "book_value_per_share",
+
+                "dividend_payout_ratio_pct",
+
+                "cash_from_operations_cr",
+
+                "composite_quality_score",
+
             ]
-        ].head()
-    )
-    value_pick = apply_preset(
-    df,
-    config["filters"]["value_pick"]
-)
 
-    print("\n==============================")
-    print("Value Pick")
-    print("==============================")
+            export_columns = [
 
-    print(f"Companies Found : {len(value_pick)}")
+                col
 
-    print(
-        value_pick[
-            [
-                "company_id",
-                "year",
-                "return_on_equity_pct",
-                "debt_to_equity",
+                for col in export_columns
+
+                if col in df.columns
+
             ]
-        ].head(10)
-    )
-    growth = apply_preset(
-    df,
-    config["filters"]["growth_accelerator"]
-)
 
-growth = calculate_composite_score(growth)
+            export_df = df[
+                export_columns
+            ]
 
-growth = growth.sort_values(
-    by="composite_quality_score",
-    ascending=False
-)
+            sheet = preset[:31]
 
-print("\n==============================")
-print("Growth Accelerator")
-print("==============================")
+            export_df.to_excel(
 
-print(f"Companies Found : {len(growth)}")
+                writer,
 
-print(
-    growth[
-        [
-            "company_id",
-            "year",
-            "pat_cagr_5yr",
-            "revenue_cagr_5yr",
-            "debt_to_equity",
-            "composite_quality_score",
-        ]
-    ].head(10)
-)
-dividend = apply_preset(
-    df,
-    config["filters"]["dividend_champion"]
-)
+                sheet_name=sheet,
 
-dividend = calculate_composite_score(dividend)
+                index=False,
 
-dividend = dividend.sort_values(
-    by="composite_quality_score",
-    ascending=False
-)
+            )
 
-print("\n==============================")
-print("Dividend Champion")
-print("==============================")
+            worksheet = writer.sheets[sheet]
 
-print(f"Companies Found : {len(dividend)}")
+            # ====================================
+            # Header Formatting
+            # ====================================
 
-columns = [
-    "company_id",
-    "year",
-    "dividend_payout_ratio_pct",
-    "free_cash_flow_cr",
-    "composite_quality_score",
-]
+            header_fill = PatternFill(
 
-available_columns = [
-    col for col in columns if col in dividend.columns
-]
+                fill_type="solid",
 
-print(dividend[available_columns].head(10))
-debt_free = apply_preset(
-    df,
-    config["filters"]["debt_free_blue_chip"]
-)
+                start_color="1F4E78",
 
-debt_free = calculate_composite_score(debt_free)
+                end_color="1F4E78",
 
-debt_free = debt_free.sort_values(
-    by="composite_quality_score",
-    ascending=False
-)
+            )
 
-print("\n==============================")
-print("Debt-Free Blue Chip")
-print("==============================")
+            header_font = Font(
 
-print(f"Companies Found : {len(debt_free)}")
+                bold=True,
 
-columns = [
-    "company_id",
-    "year",
-    "return_on_equity_pct",
-    "debt_to_equity",
-    "sales",
-    "composite_quality_score",
-]
+                color="FFFFFF",
 
-available_columns = [
-    col for col in columns
-    if col in debt_free.columns
-]
+            )
 
-print(
-    debt_free[
-        available_columns
-    ].head(10)
-)
-turnaround = apply_preset(
-    df,
-    config["filters"]["turnaround_watch"]
-)
+            for cell in worksheet[1]:
 
-turnaround = calculate_composite_score(turnaround)
+                cell.fill = header_fill
 
-turnaround = turnaround.sort_values(
-    by="composite_quality_score",
-    ascending=False
-)
+                cell.font = header_font
 
-print("\n==============================")
-print("Turnaround Watch")
-print("==============================")
+            # ====================================
+            # Freeze Header
+            # ====================================
 
-print(f"Companies Found : {len(turnaround)}")
+            worksheet.freeze_panes = "A2"
 
-columns = [
-    "company_id",
-    "year",
-    "free_cash_flow_cr",
-    "debt_to_equity",
-    "composite_quality_score",
-]
+            # ====================================
+            # Auto Width
+            # ====================================
 
-available_columns = [
-    col for col in columns
-    if col in turnaround.columns
-]
+            for column in worksheet.columns:
 
-print(
-    turnaround[
-        available_columns
-    ].head(10)
-)
-print(
+                max_length = 0
 
-    filtered[
-        [
-            "company_id",
-            "year",
-            "return_on_equity_pct",
-            "debt_to_equity",
-            "composite_quality_score",
-        ]
-    ].head(10)
+                column_letter = get_column_letter(
 
-)
+                    column[0].column
+
+                )
+
+                for cell in column:
+
+                    try:
+
+                        if len(str(cell.value)) > max_length:
+
+                            max_length = len(
+
+                                str(cell.value)
+
+                            )
+
+                    except:
+
+                        pass
+
+                worksheet.column_dimensions[
+                    column_letter
+                ].width = max_length + 3
+
+            # ====================================
+            # Green / Red Formatting
+            # ====================================
+
+            green = PatternFill(
+
+                fill_type="solid",
+
+                start_color="C6EFCE",
+
+                end_color="C6EFCE",
+
+            )
+
+            red = PatternFill(
+
+                fill_type="solid",
+
+                start_color="FFC7CE",
+
+                end_color="FFC7CE",
+
+            )
+
+            headers = {}
+
+            for cell in worksheet[1]:
+
+                headers[cell.value] = cell.column
+
+            for row in range(
+
+                2,
+
+                worksheet.max_row + 1,
+
+            ):
+
+                # ----------------
+                # ROE
+                # ----------------
+
+                if "return_on_equity_pct" in headers:
+
+                    c = worksheet.cell(
+
+                        row,
+
+                        headers[
+                            "return_on_equity_pct"
+                        ],
+
+                    )
+
+                    if c.value is not None:
+
+                        if c.value >= 15:
+
+                            c.fill = green
+
+                        else:
+
+                            c.fill = red
+
+                # ----------------
+                # Debt
+                # ----------------
+
+                if "debt_to_equity" in headers:
+
+                    c = worksheet.cell(
+
+                        row,
+
+                        headers[
+                            "debt_to_equity"
+                        ],
+
+                    )
+
+                    if c.value is not None:
+
+                        if c.value <= 1:
+
+                            c.fill = green
+
+                        else:
+
+                            c.fill = red
+
+                # ----------------
+                # Free Cash Flow
+                # ----------------
+
+                if "free_cash_flow_cr" in headers:
+
+                    c = worksheet.cell(
+
+                        row,
+
+                        headers[
+                            "free_cash_flow_cr"
+                        ],
+
+                    )
+
+                    if c.value is not None:
+
+                        if c.value > 0:
+
+                            c.fill = green
+
+                        else:
+
+                            c.fill = red
+
+                # ----------------
+                # Composite Score
+                # ----------------
+
+                if "composite_quality_score" in headers:
+
+                    c = worksheet.cell(
+
+                        row,
+
+                        headers[
+                            "composite_quality_score"
+                        ],
+
+                    )
+
+                    if c.value is not None:
+
+                        if c.value >= 70:
+
+                            c.fill = green
+
+                        elif c.value < 40:
+
+                            c.fill = red
+
+    print("\n" + "=" * 60)
+
+    print("Excel Export Completed")
+
+    print("=" * 60)
+
+    print(f"File Saved : {output_file}")
+
+    return output_file
+
+
+if __name__ == "__main__":
+    results = main()
